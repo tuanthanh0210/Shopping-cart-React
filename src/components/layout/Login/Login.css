@@ -1,0 +1,60 @@
+.Login {
+    height: 100vh;
+    background-image: url("https://wallpapertag.com/wallpaper/full/8/8/a/191467-most-popular-background-gradient-1920x1200-photos.jpg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .Sign-in {
+    color: white;
+    margin: 40px 0 30px 0;
+  }
+  
+  .Form {
+    width: 300px;
+    min-height: 350px;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 2rem;
+    position: relative;
+    border-radius: 1.5rem;
+    background-color: #505457;
+  }
+  
+  .Form img {
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    background-color: white;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 2px;
+  }
+  
+  .Form .FormGroup {
+    margin: 1rem 0;
+  }
+  
+  .Button {
+    margin: 2rem 0;
+  }
+  
+  label {
+    color: white;
+    font-size: 0.8rem;
+    text-align: left;
+  }
+  
+  .typeCheckBox {
+    margin-left: 1rem;
+  }
+  
+  .FooterLogin {
+    display: flex;
+    justify-content: space-between;
+  }
+  

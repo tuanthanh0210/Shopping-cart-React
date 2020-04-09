@@ -1,0 +1,25 @@
+NavItem {
+    padding: 0 0.5rem
+}
+
+.Link {
+    font-size: 1rem;
+    color:rgb(58, 182, 245) ;
+    font-weight: bold !important;
+}
+
+.Nav .NavItem {
+    padding: 0.5rem 1rem;
+    font-weight: bold;
+    
+}
+
+.Nav .NavItem:hover {
+    border-bottom: 3px solid rgb(13, 162, 216);
+    padding: 0.5rem 1rem;
+}
+
+.Nav .NavItem:hover .Link {
+    color: rgb(58, 182, 245);
+    text-decoration: none;
+}
