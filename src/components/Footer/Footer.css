@@ -3,10 +3,9 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    position: absolute;
-    bottom: 0;
-    width: 1400px;
     /* background-color: #EEE; */
+    max-width: 1200px;
+    margin: auto;
 }
 
 .AppMobile img {

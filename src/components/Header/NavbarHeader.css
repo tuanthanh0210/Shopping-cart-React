@@ -1,4 +1,4 @@
-NavItem {
+.NavItem {
     padding: 0 0.5rem
 }
 
@@ -16,10 +16,10 @@ NavItem {
 
 .Nav .NavItem:hover {
     border-bottom: 3px solid rgb(13, 162, 216);
-    padding: 0.5rem 1rem;
 }
 
+
 .Nav .NavItem:hover .Link {
-    color: rgb(58, 182, 245);
+    /* color: rgb(58, 182, 245); */
     text-decoration: none;
 }

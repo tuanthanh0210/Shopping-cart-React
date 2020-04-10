@@ -27,23 +27,23 @@ function NavbarHeader (props) {
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
           <Nav className="Nav ml-auto" navbar>
-            <NavItem className='NavItem'>
-              <Link className='Link' to="/home/">Home</Link>
+            <NavItem className='NavItem active'>
+              <Link className='Link' to="/home/">Trang chủ</Link>
             </NavItem>
             <NavItem className='NavItem'>
-              <Link className='Link' to="/food/">Food</Link>
+              <Link className='Link' to="/food/">Đồ ăn</Link>
             </NavItem>
             <NavItem className='NavItem'>
-              <Link className='Link' to="/drink/">Drink</Link>
+              <Link className='Link' to="/drink/">Đồ uống</Link>
             </NavItem>
             <NavItem className='NavItem'>
-              <Link className='Link' to="/streetfood/">Streetfood</Link>
+              <Link className='Link' to="/streetfood/">Ăn vặt</Link>
             </NavItem>
             <NavItem className='NavItem'>
-              <Link className='Link' to="/carts/">Cart</Link>
+              <Link className='Link' to="/carts/">Giỏ hàng</Link>
             </NavItem>
             <NavItem className='NavItem'>
-              <Link className='Link' to="/login/">Login</Link>
+              <Link className='Link' to="/login/">Đăng nhập</Link>
             </NavItem>
 
           </Nav>
