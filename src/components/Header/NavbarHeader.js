@@ -9,6 +9,8 @@ import {
 } from 'reactstrap';
 import {Link} from 'react-router-dom';
 import './NavbarHeader.css';
+import {CartContext} from '../../container/Cart/Cart'
+import Search from '../Search/Search';
 
 function NavbarHeader (props) {
   const [isOpen, setIsOpen] = useState (false);
@@ -24,6 +26,7 @@ function NavbarHeader (props) {
             alt=""
           />
         </NavbarBrand>
+        <Search width='400' />
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
           <Nav className="Nav ml-auto" navbar>
@@ -40,7 +43,11 @@ function NavbarHeader (props) {
               <Link className='Link' to="/streetfood/">Ăn vặt</Link>
             </NavItem>
             <NavItem className='NavItem'>
-              <Link className='Link' to="/carts/">Giỏ hàng</Link>
+            <CartContext.Consumer>
+                {({ cartItems }) => (
+                  <Link className='Link' to="/carts/">Giỏ hàng ({cartItems.length})</Link>
+                )}
+              </CartContext.Consumer>
             </NavItem>
             <NavItem className='NavItem'>
               <Link className='Link' to="/login/">Đăng nhập</Link>

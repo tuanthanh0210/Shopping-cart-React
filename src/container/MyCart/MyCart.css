@@ -1,0 +1,17 @@
+h1{
+    color: rgb(55, 108, 231);
+}
+
+.TotalCart{
+    padding: 2rem 0;
+    border-bottom: 1px solid #DDD;
+    border-top: 1px solid #DDD;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.total {
+    flex-grow: 1;
+    /* text-align: right; */
+}

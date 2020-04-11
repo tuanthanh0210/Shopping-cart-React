@@ -12,6 +12,8 @@ export class CartProvider extends Component {
 
     this.addToCart = this.addToCart.bind(this);
     this.removeItemCart = this.removeItemCart.bind(this);
+    this.onPurchase = this.onPurchase.bind(this);
+    this.onDeleteCart = this.onDeleteCart.bind(this);
   }
 
   addToCart(product) {
@@ -30,13 +32,29 @@ export class CartProvider extends Component {
     });
   }
 
+  onPurchase(){
+    alert('You purchased. Thanks you very much')
+    this.setState({
+      cartItems: this.state.cartItems.slice(0,0)
+    })
+  }
+  
+  onDeleteCart(){
+    alert('You deleted cart. Hmmmm.')
+    this.setState({
+      cartItems: this.state.cartItems.slice(0,0)
+    })
+  }
+
   render() {
     return (
       <CartContext.Provider
         value={{
           cartItems: this.state.cartItems,
           addToCart: this.addToCart,
-          removeItemCart: this.removeItemCart
+          removeItemCart: this.removeItemCart,
+          onPurchase: this.onPurchase,
+          onDeleteCart : this.onDeleteCart
         }}
       >
         {this.props.children}

@@ -1,11 +1,12 @@
 .Footer {
-    padding: 2rem 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
     /* background-color: #EEE; */
     max-width: 1200px;
-    margin: auto;
+    margin-top: 1rem;
+    padding: 0 2rem;
+    /* height: 120px; */
 }
 
 .AppMobile img {
@@ -17,11 +18,15 @@
     padding: 10px;
     /* border: 1px solid #AAA; */
     text-align: left;
-    margin: 1rem 0;
+    margin: 0.5rem 0;
 }
 
 .AppMobile .App span {
     padding: 0 2rem;
+}
+
+.AppMobile .Conect{
+    padding: 10px 0;
 }
 
 .AppMobile .Conect a{
@@ -39,11 +44,14 @@
 }
 
 .InfoCompany img{
-    width: 200px;
+    width: 10rem;
     height: 100%;
 }
 
 .InfoCompany p:first-child{
     font-weight: bold;
     font-size: 1.2rem;
+}
+.Logo img {
+    width: 15rem;
 }

@@ -1,19 +1,8 @@
 import React, {Component} from 'react';
-import {
-  Container,
-  Row,
-  Col,
-  Card,
-  CardImg,
-  CardText,
-  CardBody,
-  CardTitle,
-  Button
-} from "reactstrap";
+
 import axios from "axios";
 import Loading from "../../components/Loading/Loading";
-import { CartContext } from "../Cart/Cart";
-import Footer from '../../components/Footer/Footer';
+import Product from '../../components/Product/Product';
 
 class Food extends Component {
   constructor(props) {
@@ -54,30 +43,7 @@ class Food extends Component {
     if (loading) return <Loading />;
     return (
       <div className="Products">
-        <Container>
-          <h2>Đồ ăn văn phòng</h2>
-          <Row>
-            {products.map(product => (
-              <Col sm="4" key={product.id}>
-                <Card>
-                  <CardImg top width="100%" src={product.image} />
-                  <CardBody>
-                    <CardTitle>{product.name}</CardTitle>
-                    <CardText>{product.price}</CardText>
-                    <CartContext.Consumer>
-                      {({ addToCart }) => (
-                        <Button color='success' onClick={() => addToCart(product)}>
-                          Add{" "}
-                        </Button>
-                      )}
-                    </CartContext.Consumer>
-                  </CardBody>
-                </Card>
-              </Col>
-            ))}
-          </Row>
-        </Container>
-        <Footer />
+        <Product title='Đồ ăn văn phòng' products={products}/>
       </div>
     );
   }

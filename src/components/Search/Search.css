@@ -1,0 +1,25 @@
+.Search{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin: auto;
+    margin-left: 1.5rem;
+    padding: 0.5rem 0.75rem;
+    height: 2.5rem;
+    border: 1px solid #DDD;
+    background-color: white;
+}
+
+.Search img{
+    margin-right: 10px;
+}
+
+.Search input{
+    width: 100%;
+    flex-grow: 1;
+    border: none;
+}
+
+.Search input:focus{
+    outline: none;
+}

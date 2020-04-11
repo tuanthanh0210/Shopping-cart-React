@@ -6,19 +6,19 @@ import Drink from '../../container/Drink/Drink';
 import Login from '../Login/Login';
 import NavbarHeader from './NavbarHeader';
 import StreetFood from '../../container/StreetFood/StreetFood';
-import { CartProvider } from '../../container/Cart/Cart';
+import MyCart from '../../container/MyCart/MyCart'
 
 function Header (props) {
   return (
-    <div>
+    <div className='Header'>
       {/* <h2>Header</h2> */}
       <Router>
         <NavbarHeader />
         <Route path="/" exact component={Home} />
-        <Route path="/Food/" exact component={Food} />
+        <Route path="/food/" exact component={Food} />
         <Route path="/drink/" exact component={Drink} />
         <Route path="/streetfood/" exact component={StreetFood} />
-        <Route path="/Cart/" exact component={CartProvider} />
+        <Route path="/carts/" exact component={MyCart} />
         <Route path="/login/" exact component={Login} />
       </Router>
     </div>
