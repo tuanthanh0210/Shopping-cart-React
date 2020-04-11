@@ -1,12 +1,54 @@
 import React, { Component } from "react";
 import { Button, Form, FormGroup, Input, Label } from "reactstrap";
 import "./Login.css";
+import { Link, Redirect } from "react-router-dom";
+
 
 class Login extends Component {
+  constructor(props) {
+    super(props);
+    const token = localStorage.getItem("token");
+    let loggedIn = true;
+    if (token === null) {
+      loggedIn = false;
+    }
+    this.state = {
+      username: "",
+      password: "",
+      loggedIn
+    };
+
+    this.onChange = this.onChange.bind(this);
+    this.onSubmitForm = this.onSubmitForm.bind(this);
+  }
+
+  onChange(e) {
+    this.setState({
+      [e.target.name]: e.target.value
+    });
+  }
+
+  onSubmitForm(e) {
+    e.preventDefault();
+    const { username, password } = this.state;
+
+    // Login magic
+
+    if (username === "A" && password === "B") {
+      localStorage.setItem("token", "sadnqwiojdosadm");
+      this.setState({
+        loggedIn: true
+      });
+    }
+  }
+
   render() {
+    if (this.state.loggedIn) {
+      return <Redirect to="/" />;
+    }
     return (
       <div className="Login">
-        <Form className="Form">
+        <Form className="Form" onSubmit={this.onSubmitForm}>
           <h3 className='Sign-in'>Sign in</h3>
           <img
             src="https://www.now.vn/app/assets/img/Logo-Nowvn-Elip.png?e398e9326ddac9d81cae2dfce3c1d96c"
@@ -14,28 +56,30 @@ class Login extends Component {
           />
           <FormGroup className="FormGroup">
             <Input
-              type="email"
-              name="email"
-              id="exampleEmail"
-              placeholder="Username"
+              type="text"
+              placeholder="username"
+              name="username"
+              value={this.state.username}
+              onChange={this.onChange}
             />
           </FormGroup>
           <FormGroup className="FormGroup">
             <Input
               type="password"
+              placeholder="password"
               name="password"
-              id="examplePassword"
-              placeholder="Password"
+              value={this.state.password}
+              onChange={this.onChange}
             />
           </FormGroup>
           <Label check className="typeCheckBox">
             <Input type="checkbox" /> Remember me
           </Label>
 
-          <Button className="Button">Sign in</Button>
+          <Button type='submit' className="Button">Sign in</Button>
           <div className="FooterLogin">
-            <Label>Register</Label>
-            <Label>Forgot password ?</Label>
+            <Label><Link style={{color: `white`, fontSize:`1rem`}} to="/register/">Register</Link></Label>
+            <Label><Link style={{color: `white`, fontSize:`1rem`}} to="/register/">Forgot password ?</Link></Label>
           </div>
         </Form>
       </div>

@@ -31,7 +31,7 @@ function NavbarHeader (props) {
         <Collapse isOpen={isOpen} navbar>
           <Nav className="Nav ml-auto" navbar>
             <NavItem className='NavItem active'>
-              <Link className='Link' to="/home/">Trang chủ</Link>
+              <Link className='Link' to="/">Trang chủ</Link>
             </NavItem>
             <NavItem className='NavItem'>
               <Link className='Link' to="/food/">Đồ ăn</Link>

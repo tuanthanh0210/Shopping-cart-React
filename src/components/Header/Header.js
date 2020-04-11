@@ -10,7 +10,7 @@ import MyCart from '../../container/MyCart/MyCart'
 
 function Header (props) {
   return (
-    <div className='Header'>
+    <div>
       {/* <h2>Header</h2> */}
       <Router>
         <NavbarHeader />

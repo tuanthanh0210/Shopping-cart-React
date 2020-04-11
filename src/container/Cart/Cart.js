@@ -35,14 +35,14 @@ export class CartProvider extends Component {
   onPurchase(){
     alert('You purchased. Thanks you very much')
     this.setState({
-      cartItems: this.state.cartItems.slice(0,0)
+      cartItems: []
     })
   }
   
   onDeleteCart(){
     alert('You deleted cart. Hmmmm.')
     this.setState({
-      cartItems: this.state.cartItems.slice(0,0)
+      cartItems: []
     })
   }
 
