@@ -36,9 +36,11 @@ class Login extends Component {
 
     if (username === "A" && password === "B") {
       localStorage.setItem("token", "sadnqwiojdosadm");
-      this.setState({
+      this.setState({ 
         loggedIn: true
       });
+    } else {
+      alert('Bạn đã nhập sai tài khoản...')
     }
   }
 
@@ -79,7 +81,7 @@ class Login extends Component {
           <Button type='submit' className="Button">Sign in</Button>
           <div className="FooterLogin">
             <Label><Link style={{color: `white`, fontSize:`1rem`}} to="/register/">Register</Link></Label>
-            <Label><Link style={{color: `white`, fontSize:`1rem`}} to="/register/">Forgot password ?</Link></Label>
+            <Label><Link style={{color: `white`, fontSize:`1rem`}} to="#">Forgot password ?</Link></Label>
           </div>
         </Form>
       </div>

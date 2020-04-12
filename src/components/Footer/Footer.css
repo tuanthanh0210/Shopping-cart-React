@@ -40,12 +40,15 @@
 
 .InfoCompany {
     text-align: right;
-    max-width: 250px;
 }
 
 .InfoCompany img{
     width: 10rem;
     height: 100%;
+}
+.InfoCompany p{
+    max-width: 250px;
+
 }
 
 .InfoCompany p:first-child{
@@ -54,4 +57,33 @@
 }
 .Logo img {
     width: 15rem;
+}
+
+@media(max-width:767px){
+    .Logo img{
+        display: none;
+    }
+}
+
+@media(max-width: 575px){
+    .AppMobile{
+        display: none;
+    }
+    .InfoCompany{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+        margin: 0 !important;
+        padding: 0 !important;
+        width: 100%;
+    }
+
+    .InfoCompany img{
+        display: none;
+    }
+    .InfoCompany p:first-child{
+        color: red;
+    }
 }

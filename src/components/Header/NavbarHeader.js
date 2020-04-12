@@ -19,18 +19,18 @@ function NavbarHeader (props) {
   return (
     <div>
       {/* <h3>Navbar</h3> */}
-      <Navbar color="light" light expand="md">
+      <Navbar className='NavBar' color="light" light expand="lg">
         <NavbarBrand href="/">
           <img
             src="https://www.now.vn/app/assets/img/nowvn.png?aa6bbddbf923c9dfd35ca83a7d068e6d"
             alt=""
           />
         </NavbarBrand>
-        <Search width='400' />
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
+        <Search className='Search' />
           <Nav className="Nav ml-auto" navbar>
-            <NavItem className='NavItem active'>
+            <NavItem className='NavItem'>
               <Link className='Link' to="/">Trang chủ</Link>
             </NavItem>
             <NavItem className='NavItem'>

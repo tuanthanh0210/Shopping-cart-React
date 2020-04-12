@@ -1,25 +1,46 @@
 .NavItem {
-    padding: 0 0.5rem
+    padding: 0 0.5rem;
 }
 
 .Link {
     font-size: 1.1rem;
-    color:rgb(55, 108, 231) ;
+    color: rgb(55, 108, 231);
     font-weight: bold !important;
 }
 
 .Nav .NavItem {
     padding: 0.5rem 1rem;
     font-weight: bold;
-    
 }
 
-.Nav .NavItem:hover {
-    border-bottom: 3px solid rgb(13, 162, 216);
-}
+/* .Nav .NavItem:hover {
+    color:  rgb(68, 170, 221); */
 
+/* } */
 
 .Nav .NavItem:hover .Link {
-    /* color: rgb(58, 182, 245); */
+    color: black;
     text-decoration: none;
 }
+
+.Search {
+    width: 100%;
+    max-width: 400px;
+}
+
+/* @media (max-width: 991px) {
+    .Nav {
+        position: fixed;
+        width: 80%;
+        max-width: 350px;
+        height: 100vh;
+        background: #2c3e50;
+        text-align: center;
+        transition: all 0.5s;
+        z-index: 1;
+    }
+    .NavItem .Link{
+        color: white;
+    }
+    
+} */
