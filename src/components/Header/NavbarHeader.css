@@ -27,20 +27,3 @@
     width: 100%;
     max-width: 400px;
 }
-
-/* @media (max-width: 991px) {
-    .Nav {
-        position: fixed;
-        width: 80%;
-        max-width: 350px;
-        height: 100vh;
-        background: #2c3e50;
-        text-align: center;
-        transition: all 0.5s;
-        z-index: 1;
-    }
-    .NavItem .Link{
-        color: white;
-    }
-    
-} */

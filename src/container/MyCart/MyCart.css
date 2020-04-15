@@ -11,7 +11,36 @@ h1{
     align-items: center;
 }
 
+.total-price{
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .total {
     flex-grow: 1;
     /* text-align: right; */
+}
+
+@media(max-width:767px){
+    .TotalCart{
+        display: flex;
+        flex-direction: column;
+        /* justify-content: space-between; */
+    }
+    .total-price {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-end !important;
+    }
+    .total-price .total {
+        flex-grow: 1;
+    }
+    .Btn-Pay-Del{
+        display: flex;
+        flex-direction: row !important;
+        justify-content: center;
+        align-items: center;
+    }
 }

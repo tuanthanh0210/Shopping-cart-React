@@ -9,7 +9,7 @@ class MyCart extends Component {
       <div className="MyCart">
         <h1>Giỏ hàng</h1>
 
-        <Table hover style={{align: `center`}}>
+        <Table hover responsive style={{align: `center`}}>
           <thead>
             <tr>
               <th>STT</th>
@@ -18,7 +18,7 @@ class MyCart extends Component {
               <th>Đơn giá</th>
               <th>Số lượng</th>
               <th>Thành tiền</th>
-              <th>Xóa</th>
+              <th>Hành động</th>
             </tr>
           </thead>
           <tbody>
@@ -55,9 +55,9 @@ class MyCart extends Component {
                       />
                     </td>
                     <td>{cart.product.name}</td>
-                    <td>{cart.product.price}</td>
+                    <td>{cart.product.price.toLocaleString ()}</td>
                     <td>{cart.count}</td>
-                    <td>{cart.totalItem.toLocaleString()}</td>
+                    <td>{cart.totalItem.toLocaleString ()}</td>
                     <td>
                       <CartContext.Consumer>
                         {({removeItemCart}) => (
@@ -80,34 +80,41 @@ class MyCart extends Component {
           {({cartItems}) =>
             cartItems.length > 0 &&
             <div className="TotalCart">
-              <h3>Tổng thiệt hại</h3>
-              <h3 className="total">
-                {cartItems.reduce ((total, item) => {
-                  return total + item.price;
-                }, 0).toLocaleString()}
-              </h3>
-              <CartContext.Consumer>
-                {({onPurchase}) => (
-                  <Button
-                    style={{margin: `0 8px`}}
-                    color="primary"
-                    onClick={() => onPurchase ()}
-                  >
-                    Thanh toán{' '}
-                  </Button>
-                )}
-              </CartContext.Consumer>
-              <CartContext.Consumer>
-                {({onDeleteCart}) => (
-                  <Button
-                    style={{margin: `0 8px`}}
-                    color="danger"
-                    onClick={() => onDeleteCart ()}
-                  >
-                    Hủy đơn hàng{' '}
-                  </Button>
-                )}
-              </CartContext.Consumer>
+              <div className="total-price">
+                <h3>Tổng :</h3>
+                <h3 className="total ml-4">
+                  {cartItems
+                    .reduce ((total, item) => {
+                      return total + item.price;
+                    }, 0)
+                    .toLocaleString ()}
+                </h3>
+              </div>
+              <div className="Btn-Pay-Del">
+                <CartContext.Consumer>
+                  {({onPurchase}) => (
+                    <Button
+                      style={{margin: `0 8px`}}
+                      color="primary"
+                      onClick={() => onPurchase ()}
+                    >
+                      Thanh toán{' '}
+                    </Button>
+                  )}
+                </CartContext.Consumer>
+                <CartContext.Consumer>
+                  {({onDeleteCart}) => (
+                    <Button
+                      style={{margin: `0 8px`}}
+                      color="danger"
+                      onClick={() => onDeleteCart ()}
+                    >
+                      Hủy đơn hàng{' '}
+                    </Button>
+                  )}
+                </CartContext.Consumer>
+              </div>
+
             </div>}
         </CartContext.Consumer>
       </div>
