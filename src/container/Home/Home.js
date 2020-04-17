@@ -32,7 +32,7 @@ export default class Home extends Component {
           <h1>Home Page</h1>
           <button onClick={() => this.onLogout()}>
             <Link to="/login/">Logout</Link>
-          </button>
+          </button>z
         </div>
       );
     }

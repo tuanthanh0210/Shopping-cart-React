@@ -1,3 +1,8 @@
+.NavBar{
+      max-width: 1200px;
+      margin: auto;
+}
+
 .NavItem {
     padding: 0 0.5rem;
 }

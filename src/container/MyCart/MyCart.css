@@ -1,3 +1,8 @@
+.MyCart{
+      max-width: 1200px;
+      margin: auto;
+}
+
 h1{
     color: rgb(55, 108, 231);
 }
