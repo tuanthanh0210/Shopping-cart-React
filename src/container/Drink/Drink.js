@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import axios from 'axios';
 import Loading from '../../components/Loading/Loading';
 import Product from '../../components/Product/Product';
+import Footer from '../../components/Footer/Footer'
 
 
 class Drink extends Component {
@@ -45,6 +46,7 @@ class Drink extends Component {
     return (
       <div className="Products">
         <Product title="Đồ uống" products={products} />
+        <Footer />
       </div>
     );
   }

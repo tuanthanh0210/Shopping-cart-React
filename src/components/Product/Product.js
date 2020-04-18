@@ -1,18 +1,7 @@
 import React from 'react';
-import {
-  Container,
-  Row,
-  Col,
-  Card,
-  CardImg,
-  CardText,
-  CardBody,
-  CardTitle,
-  Button,
-} from 'reactstrap';
-import {CartContext} from '../../container/Cart/Cart';
-import Footer from '../Footer/Footer';
-import './Product.css'
+import { Button, Card, CardBody, CardImg, CardText, CardTitle, Col, Container, Row } from 'reactstrap';
+import { CartContext } from '../../container/Cart/Cart';
+import './Product.css';
 // import PropTypes from 'prop-types';
 
 // Product.propTypes = {
@@ -63,7 +52,6 @@ function Product (props) {
           ))}
         </Row>
       </Container>
-      <Footer />
     </div>
   );
 }

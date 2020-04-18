@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import axios from "axios";
 import Loading from "../../components/Loading/Loading";
 import Product from '../../components/Product/Product';
+import Footer from '../../components/Footer/Footer'
 
 class StreetFood extends Component {
   constructor(props) {
@@ -43,6 +44,7 @@ class StreetFood extends Component {
     return (
       <div className="StreetFoods">
         <Product title='Ăn vặt vỉa hè' products={products}/>
+        <Footer />
       </div>
     );
   }

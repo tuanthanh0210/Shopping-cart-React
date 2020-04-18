@@ -2,6 +2,7 @@ import React, {useEffect, useState} from 'react';
 import axios from 'axios';
 import Loading from '../../components/Loading/Loading';
 import Product from '../../components/Product/Product';
+import Footer from '../../components/Footer/Footer'
 
 export default function Food () {
   const [loading, setLoading] = useState (true);
@@ -35,6 +36,7 @@ export default function Food () {
   return (
     <div className="Products">
       <Product title="Đồ ăn văn phòng" products={products} />
+      <Footer />
     </div>
   );
 }

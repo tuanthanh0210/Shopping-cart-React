@@ -1,7 +1,103 @@
 .Home{
     width: 100%;
     height: 1000px;
+    font-size: 18px;
     background-position: center;
     background-size: cover;
     background-image: url('https://www.now.vn/app/assets/img/main-banner.jpg?45bff8c9ec408a5ba51f9fdef662324e');
+}
+
+.Main{
+    display: flex;
+    justify-content: center;
+
+}
+.Main-Left{
+    color: white;
+    margin-right: 100px;
+    margin-top: 40px;
+}
+
+.Main-Left p:first-child {
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+.Main-Left .search-home{
+    width: 400px;
+    background-color: white;
+    margin: auto;
+    height: 50px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.Main-Left .search-home input{
+    flex-grow: 1;
+    border: none;
+    padding: 0 10px;
+}
+
+.Main-Left .search-home input:focus{
+    outline: none;
+}
+
+.Main-Left .search-home img{
+    margin-right: 16px;
+}
+
+.Main-Left .search-home img:hover{
+    cursor: pointer;
+}
+
+.list-item{
+    margin-left: 15px;
+    margin-top: 40px;
+    /* display: flex; */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 450px;
+}
+
+.list-item span {
+    display: inline-block;
+    padding: 8px 15px;
+    border: 1px solid white;
+    background-color: transparent;
+    min-width: 100px;
+    margin: 20px;
+    border-radius: 8px;
+}
+
+.list-item span:hover{
+    cursor: pointer;
+}
+
+.app-mobile-now img{
+    margin: 20px 10px 10px;
+    border: 1px solid white;
+    border-radius: 5px;
+}
+
+.Main-Right{
+    margin-left: 50px;
+    background-color: rgb(230, 230, 230);
+    padding: 10px;
+    margin-top: 40px;
+    border-radius: 0.5rem;
+}
+.Main-Right .list-product{
+    width: 750px;
+    font-size: 16px;
+}
+.Main-Right .CardTitle {
+    font-size: 20px;
+}
+
+.Main-Right .title {
+    text-align: left;
+    margin-left: 1rem;
 }
