@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Button, Form, FormGroup, Input, Label } from "reactstrap";
 import "./Login.css";
 import { Link, Redirect } from "react-router-dom";
+import { CartContext } from "../../container/Cart/Cart";
 
 
 class Login extends Component {
@@ -31,10 +32,10 @@ class Login extends Component {
   onSubmitForm(e) {
     e.preventDefault();
     const { username, password } = this.state;
-
+    
     // Login magic
-
-    if (username === "A" && password === "B") {
+    
+    if (username === "1" && password === "1") {
       localStorage.setItem("token", "sadnqwiojdosadm");
       this.setState({ 
         loggedIn: true
@@ -77,8 +78,12 @@ class Login extends Component {
           <Label check className="typeCheckBox">
             <Input type="checkbox" /> Remember me
           </Label>
+          <CartContext.Consumer>
+            {({onLogin}) => (
 
-          <Button type='submit' className="Button">Sign in</Button>
+              <Button type='submit' className="Button" onClick={onLogin}>Sign in</Button>
+              )}
+          </CartContext.Consumer>
           <div className="FooterLogin">
             <Label><Link style={{color: `white`, fontSize:`1rem`}} to="/register/">Register</Link></Label>
             <Label><Link style={{color: `white`, fontSize:`1rem`}} to="#">Forgot password ?</Link></Label>

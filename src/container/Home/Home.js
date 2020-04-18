@@ -1,6 +1,6 @@
 import axios from 'axios';
 import React, { Component } from 'react';
-import { Link, Redirect } from 'react-router-dom';
+import { Redirect } from 'react-router-dom';
 import { Button, Card, CardBody, CardImg, CardText, CardTitle, Col, Container, Row } from 'reactstrap';
 import Loading from '../../components/Loading/Loading';
 import { CartContext } from '../../container/Cart/Cart';
@@ -57,10 +57,7 @@ export default class Home extends Component {
     if (loading) return <Loading />;
     return (
       <div className="Home">
-        {/* <h1>Home Page</h1>
-        <button onClick={() => this.onLogout ()}>
-          <Link to="/login/">Logout</Link>
-        </button> */}
+        
         <div className="Main">
           <div className="Main-Left">
             <p>Đặt đồ ăn, giao hàng từ 20' ...</p>
@@ -112,7 +109,7 @@ export default class Home extends Component {
             {/* <Product /> */}
           </div>
           <div className="Main-Right">
-            <p className='title'><a href="#">Chọn địa chỉ giao hàng</a></p>
+            <p className="title"><a href="#">Chọn địa chỉ giao hàng</a></p>
             <div className="list-product">
               <Container>
                 <Row>
@@ -122,7 +119,7 @@ export default class Home extends Component {
                         <CardImg
                           className="CardImg"
                           top
-                          width='100%'
+                          width="100%"
                           src={product.image}
                         />
                         <CardBody className="CardBody">

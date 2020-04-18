@@ -5,15 +5,27 @@ export const CartContext = React.createContext();
 export class CartProvider extends Component {
   constructor(props) {
     super(props);
-
-    this.state = {
-      cartItems: []
-    };
+    const token = localStorage.getItem('token');
+    
+    if(token !== null){
+      this.state = {
+        isLogin : true,
+        cartItems: [],
+      };
+    } else{
+      this.state = {
+        isLogin : false,
+        cartItems: [],
+      };
+    }
+    
 
     this.addToCart = this.addToCart.bind(this);
     this.removeItemCart = this.removeItemCart.bind(this);
     this.onPurchase = this.onPurchase.bind(this);
     this.onDeleteCart = this.onDeleteCart.bind(this);
+    this.onLogout = this.onLogout.bind(this);
+    this.onLogin = this.onLogin.bind(this);
   }
 
   addToCart(product) {
@@ -24,9 +36,6 @@ export class CartProvider extends Component {
   }
 
   removeItemCart(id) {
-    // console.log("remove" + id);
-    // const newCart = [...this.state.cartItems];
-    // let index = this.state.cartItems.indexOf(product);
     this.setState({
       cartItems: this.state.cartItems.filter(item => item.id !== id)
     });
@@ -46,11 +55,31 @@ export class CartProvider extends Component {
     })
   }
 
+  onLogout () {
+    localStorage.removeItem ('token');
+    this.setState({
+      isLogin: false
+    })
+  }
+
+  onLogin(){
+    this.setState({
+      isLogin: true
+    })
+  }
+  
+
   render() {
+    // if(this.state.isLogin === false){
+    //   return <Redirect to="/login/" />
+    // }
     return (
       <CartContext.Provider
         value={{
           cartItems: this.state.cartItems,
+          isLogin: this.state.isLogin,
+          onLogout: this.onLogout,
+          onLogin: this.onLogin,
           addToCart: this.addToCart,
           removeItemCart: this.removeItemCart,
           onPurchase: this.onPurchase,
