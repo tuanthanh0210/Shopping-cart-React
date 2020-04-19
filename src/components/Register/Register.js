@@ -17,7 +17,7 @@ class Register extends Component {
   }
 
   onChange (e) {
-    console.log (e.target.name, e.target.value);
+    // console.log (e.target.name, e.target.value);
     this.setState ({
       [e.target.name]: e.target.value,
     });
@@ -33,7 +33,8 @@ class Register extends Component {
         email: email,
       },
     ];
-    if(username === null || password === null || email === null){
+    if(username === '' || password === '' || email === ''){
+      console.log(username)
       alert('Nhập thông tin')
     } else {
       localStorage.setItem ('users', JSON.stringify (users));
