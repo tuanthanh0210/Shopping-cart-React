@@ -43,9 +43,9 @@ function NavbarHeader (props) {
               <Link className="Link" to="/streetfood/">Ăn vặt</Link>
             </NavItem>
             <CartContext.Consumer>
-              {({cartItems}) =>
+              {({isLogin, cartItems}) =>
                 cartItems.length > 0 &&
-                <NavItem className="NavItem">
+                isLogin && <NavItem className="NavItem">
                   <Link className="Link" to="/carts/">
                     Giỏ hàng ({cartItems.length})
                   </Link>

@@ -109,7 +109,7 @@ export default class Home extends Component {
             {/* <Product /> */}
           </div>
           <div className="Main-Right">
-            <p className="title"><a href="#">Chọn địa chỉ giao hàng</a></p>
+            <p className="title">Chọn địa chỉ giao hàng</p>
             <div className="list-product">
               <Container>
                 <Row>
@@ -150,7 +150,7 @@ export default class Home extends Component {
                 </Row>
               </Container>
             </div>
-            <a href="#">Xem thêm</a>
+            <p>Xem thêm</p>
           </div>
         </div>
       </div>

@@ -28,20 +28,21 @@ class Login extends Component {
     });
   }
 
-  onSubmitForm (callback) {
+  onSubmitForm (onLogin) {
+    // e.preventDefault ();
     const {username, password} = this.state;
-
-    // Login magic
-
-    if (username === '1' && password === '1') {
-      localStorage.setItem ('token', 'sadnqwiojdosadm');
-      this.setState ({
-        loggedIn: true,
-      });
-      callback()
-    } else {
-      alert ('Bạn đã nhập sai tài khoản...');
-    }
+    const users = JSON.parse(localStorage.getItem('users'))
+    users.map( item => {
+      if (username === item.username && password === item.password) {
+        localStorage.setItem ('token', 'sadnqwiojdosadm');
+        this.setState ({
+          loggedIn: true,
+        });
+        onLogin()
+      } else {
+        alert ('Bạn đã nhập sai tài khoản...');
+      }
+    })
   }
 
   render () {

@@ -7,6 +7,7 @@ import Login from '../Login/Login';
 import NavbarHeader from './NavbarHeader';
 import StreetFood from '../../container/StreetFood/StreetFood';
 import MyCart from '../../container/MyCart/MyCart'
+import Register from '../Register/Register';
 
 function Header (props) {
   return (
@@ -20,6 +21,7 @@ function Header (props) {
         <Route path="/streetfood/" exact component={StreetFood} />
         <Route path="/carts/" exact component={MyCart} />
         <Route path="/login/" exact component={Login} />
+        <Route path="/register/" exact component={Register} />
       </Router>
     </div>
   );

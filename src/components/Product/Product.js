@@ -28,8 +28,8 @@ function Product (props) {
                   <div className="Card-Cart-Price">
                     <CardText className="CardText"> {product.price.toLocaleString()} VNĐ</CardText>
                     <CartContext.Consumer>
-                      {({addToCart}) => (
-                        <Button
+                      {({isLogin, addToCart}) => (
+                        isLogin && <Button
                           color="success"
                           onClick={() => addToCart (product)}
                         >
