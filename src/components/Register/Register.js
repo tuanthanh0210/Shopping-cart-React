@@ -34,8 +34,7 @@ class Register extends Component {
       },
     ];
     if(username === '' || password === '' || email === ''){
-      console.log(username)
-      alert('Nhập thông tin')
+      alert('Bạn nhập thiếu thông tin ...')
     } else {
       localStorage.setItem ('users', JSON.stringify (users));
       alert ('Bạn đã đăng ký thành công !');
@@ -80,15 +79,13 @@ class Register extends Component {
             />
           </FormGroup>
 
-          {/* <Link className="Link-Register"> */}
           <Button
             type="submit"
             className="Button-Register"
             onClick={this.onSubmitForm}
-          >
+            >
             Register
           </Button>
-          {/* </Link> */}
           <Link to="/">
             <Button type="submit" className="Button-Register">
               Back to Login

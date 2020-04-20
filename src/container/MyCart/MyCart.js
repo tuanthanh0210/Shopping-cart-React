@@ -24,6 +24,7 @@ class MyCart extends Component {
           <tbody>
             <CartContext.Consumer>
               {({cartItems}) => {
+                // console.log(cartItems)
                 const carts = [
                   ...new Set (cartItems.map (item => item.id)),
                 ].map (item => {

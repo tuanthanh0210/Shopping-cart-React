@@ -60,6 +60,15 @@ function NavbarHeader (props) {
                   </Link>
                 </NavItem>}
             </CartContext.Consumer>
+            <CartContext.Consumer>
+              {({isLogin}) =>
+                !isLogin &&
+                <NavItem className="NavItem">
+                  <Link className="Link" to="/login/">
+                    Đăng nhập
+                  </Link>
+                </NavItem>}
+            </CartContext.Consumer>
           </Nav>
         </Collapse>
       </Navbar>

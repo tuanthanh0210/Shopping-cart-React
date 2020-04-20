@@ -46,9 +46,6 @@ export default class Home extends Component {
     this.isComponentMounted = false;
   }
 
-  onLogout () {
-    localStorage.removeItem ('token');
-  }
   render () {
     const {products, loading} = this.state;
     if (this.state.loggedIn === false) {

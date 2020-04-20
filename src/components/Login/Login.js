@@ -39,6 +39,8 @@ class Login extends Component {
           loggedIn: true,
         });
         onLogin()
+      } else if(username === '' || password === '') {
+        alert('Bạn vui lòng nhập thông tin')
       } else {
         alert ('Bạn đã nhập sai tài khoản...');
       }
